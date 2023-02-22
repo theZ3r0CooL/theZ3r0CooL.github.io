@@ -9,24 +9,27 @@
     <em>This page is built using static HTML, CSS and vanillaJS.</em>  
     <br>    
     <p>While there are better tools and frameworks to use; examples of which can be found in my other repos, this is built with the intent of showcasing a basic understanding of the core web stack as well as how some tasks can be accomplished with a simple markup language such as CSS and limited JS.</p>
-    <details>
-        <summary>Feature Roadmap</summary>
-        <h6>Complete</h6>
-        <ul style='text-align: start'>
+    <details style='text-align: start;'>
+        <summary style='text-align: center;'>Feature Roadmap</summary>
+        <h6 style='color: mediumseagreen'>Complete</h6>
+        <ul>
             <li><em>Theme switcher and styling using HTML and CSS; JS used only to persist selection.</em></li>
             <li><em>Pinned repos pulled and displayed live from GitHub user profile.</em></li>
+            <li><em>Fixed most cursor 'blob' effect.</em></li>
         </ul>
-        <h6>In Progress</h6>
-        <ul style='text-align: start'>
+        <h6 style='color: mediumturquoise'>In Progress</h6>
+        <ul>
             <li><em>Add game for viewers to waste time playing while browsing projects.</em></li>
             <li><em>Add animations in minor areas such as section resizing.</em></li>
             <li><em>Add more projects as they are ready.</em></li>
+            <li><em>Add option to toggle cursor 'blob' effect.</em></li>
+            <li><em>Add more GitHub user info and stats.</em></li>
             <li><em>Add notify/subscribe options.</em></li>
         </ul>
-        <h6>Potentially</h6>
-        <ul style='text-align: start'>
-            <li><em>Improve and include cursor 'blob' effect.</em></li>
+        <h6 style='color: goldenrod'>Potentially</h6>
+        <ul>
             <li><em>Replace or supplement jQuery examples with GSAP equivalents.</em></li>
+            <li><em>Make cursor 'blob' effect colors change to better match selected themes.</em></li>
         </ul>
     </details>
 </section>

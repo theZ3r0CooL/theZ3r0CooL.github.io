@@ -168,9 +168,6 @@
 /* for browsers with ':has()' support */
 :root:has(#Pink:checked) {
     --color-body-bg: hsl(310deg 32% 86%);
-
-    /* --color-body-bg: rgba(255 191 202 / 1); inWork: determine best colors */
-
     --color-switcher-bg: var(--color-transparent-10);
     --color-content-bg: hsl(310deg 50% 100%);
     --color-content-shadow: hsl(310deg 50% 10%);

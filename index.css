@@ -11,33 +11,31 @@
     --color-text: hsl(0deg 0% 15%);
     --color-heading: hsl(0deg 0% 25%);
 
-    font-size: 14pt;
+    /* static values */
+    --font-size: 14pt;
+
+    /* variable values */
+    --opacity: 0.8;
 }
 
 /* element based styling */
 html {
     width: 100%;
     height: 100%;
+    font-size: var(--font-size);
 }
 
 body {
-    position: absolute;
+    position: fixed;
     inset: 0;
     margin: 0;
     font-family: system-ui, sans-serif;
     background: var(--color-body-bg);
     color: var(--color-text);
-
 }
 
 /* prevent highlighting */
-h1,
-h2,
-h3,
-label,
-a,
-p,
-svg {
+body * {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -52,6 +50,7 @@ label {
 
 svg {
     color: var(--color-text);
+    transition: opacity 300ms ease;
 }
 
 header {
@@ -74,7 +73,11 @@ header > * {
 
 header svg {
     width: 5rem;
-    transition: opacity 200ms ease;
+}
+
+a:hover svg,
+button:hover svg {
+    opacity: 0.6;
 }
 
 section {
@@ -90,15 +93,13 @@ section {
     box-shadow: -0.2rem 0.2rem 0.3rem var(--color-content-shadow);
 }
 
-section > svg {
+section svg#loading {
+    width: min-content;
+    height: auto;
     align-self: center;
 }
 
-a:hover svg {
-    opacity: 0.5;
-}
-
-button, input {
+button, input, a {
     cursor: pointer;
     padding: 0;
     background: none;
@@ -111,17 +112,40 @@ ul {
     list-style-type: ' - ';
 }
 
-/* class based styling */
+/* class specified UI element styling */
 .content {
-    position: absolute;
-    inset: 5rem 0 0 0;
+    position: fixed;
+    inset: 50% 0 0 0;
+    translate: 0 -50%;
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    z-index: 1;
 }
 
 .content > * {
     place-self: center;
+    transition: opacity 250ms ease;
+    opacity: var(--opacity);
+}
+
+.content > *:hover {
+    --opacity: 0.6;
+}
+
+.content a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* TODO: add support for browsers without ':has()' */
+.content *:has(a:hover),
+.content *:has(a:active) {
+    --opacity: 0.8;
 }
 
 @media (orientation: landscape) and (max-width: 700px),
@@ -132,7 +156,6 @@ ul {
     }
 }
 
-/* class specified UI element styling */
 .divider-h {
     width: 100%;
     height: 0.1rem;
@@ -155,16 +178,6 @@ ul {
     margin: 1rem 0 1rem 1rem;
 }
 
-#repos a {
-    color: var(--color-text);
-    text-decoration: none;
-}
-
-#repos a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-}
-
 #repos p {
     margin: 0;
     font-size: 0.9em;
@@ -172,42 +185,55 @@ ul {
     opacity: 0.6;
 }
 
-
 /* blob styling */
 #blob {
     position: absolute;
-    width: 10rem;
+    width: auto;
+    height: 120%;
     aspect-ratio: 1;
     background: linear-gradient(45deg, deepskyblue,  hotpink);
     border-radius: 50%;
     translate: -50% -50%;
     animation: rotate 14s infinite;
+    /*opacity: 0.8; TODO: maybe lower the opacity if not themed */
     z-index: -1;
+}
 
-    filter: blur(50px);
+@media (orientation: portrait) {
+    #blob {
+        width: auto;
+        height: 30%;
+    }
+}
+
+/* blur styling */
+#blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    scale: 1;
+    backdrop-filter: blur(100px);
+    z-index: 0;
+}
+
+/* safari < 16.4 */
+@supports not (backdrop-filter: blur()) {
+    #blur {
+        -webkit-backdrop-filter: blur(100px);
+    }
 }
 
 /* animation for blob */
 @keyframes rotate {
     0% {
         rotate: 0;
-        /*scale: 1 1.5;*/
     }
 
     50% {
-        scale: 1 1.5;
+        scale: 1 1.8;
     }
 
     100% {
         rotate: 359deg;
-        /*scale: 1.5 1;*/
     }
 }
-
-/* blur styling */
-/*#blur {
-    position: fixed;
-    inset: 0;
-    -webkit-backdrop-filter: blur(4rem);
-    backdrop-filter: blur(4rem);
-}*/
