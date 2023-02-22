@@ -19,6 +19,7 @@
         <h6>In Progress</h6>
         <ul style='text-align: start'>
             <li><em>Add game for viewers to waste time playing while browsing projects.</em></li>
+            <li><em>Add animations in minor areas such as section resizing.</em></li>
             <li><em>Add more projects as they are ready.</em></li>
             <li><em>Add notify/subscribe options.</em></li>
         </ul>
