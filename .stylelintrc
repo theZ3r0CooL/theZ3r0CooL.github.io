@@ -1,0 +1,49 @@
+{
+  "plugins": [
+    "stylelint-order"
+  ],
+  "extends": "stylelint-config-standard",
+  "defaultSeverity": "warning",
+  "ignoreFiles": [
+    "*.json", "**/*.json", "LICENSE",
+    "*.svg", "**/*.svg",
+    "*.yml", "**/*.yml",
+    "*.webmanifest", "**/*.webmanifest"
+  ],
+  "rules": {
+    "alpha-value-notation": null,
+    "color-no-invalid-hex": true,
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^[a-z][a-zA-Z]*([A-Z][a-zA-Z]*)*$|^[A-Z][a-zA-Z]*([A-Z][a-zA-Z]*)*$",
+      {
+        "message": "Expected class of selector be kebab-case, camelCase or PascalCase",
+        "severity": "warning"
+      }
+    ],
+    "selector-id-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^[a-z][a-zA-Z]*([A-Z][a-zA-Z]*)*$|^[A-Z][a-zA-Z]*([A-Z][a-zA-Z]*)*$",
+      {
+        "message": "Expected id of selector be kebab-case, camelCase or PascalCase",
+        "severity": "warning"
+      }
+    ],
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "order/properties-order": [
+      "width",
+      "height"
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.html", "**/*.html"],
+      "customSyntax": "postcss-html"
+    },
+    {
+      "files": ["*.md", "**/*.md"],
+      "customSyntax": "postcss-markdown"
+    }
+  ]
+}

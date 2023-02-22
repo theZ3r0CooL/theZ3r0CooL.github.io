@@ -1,0 +1,51 @@
+{
+  "name": "thez3r0cool.github.io",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "devDependencies": {
+    "depcheck": "^1.4.3",
+    "postcss-html": "^1.5.0",
+    "postcss-markdown": "^1.2.0",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-order": "^6.0.2"
+  },
+  "scripts": {
+    "stylelint": "stylelint --config='.stylelintrc' ./",
+    "depcheck": "npx depcheck --config='.depcheckrc'"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version",
+      "last 2 iOS versions",
+      "last 1 Android version",
+      "last 1 ChromeAndroid version",
+      "ie 11"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theZ3r0CooL/theZ3r0CooL.github.io.git"
+  },
+  "description": "<hr style='border-top: 3px solid #bbb'/> <img src='./code-z3r0.svg' alt='Z3r0/'/>",
+  "bugs": {
+    "url": "https://github.com/theZ3r0CooL/theZ3r0CooL.github.io/issues"
+  },
+  "homepage": "https://github.com/theZ3r0CooL/theZ3r0CooL.github.io#readme",
+  "main": "index.html",
+  "keywords": [
+    "z3r0",
+    "z3r0cool",
+    "thez3r0cool",
+    "zerocool"
+  ],
+  "author": "theZ3r0CooL"
+}

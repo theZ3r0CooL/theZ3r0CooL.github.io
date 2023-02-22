@@ -1,0 +1,6 @@
+{
+    ignores: [
+        "@testing-**/*",
+        "**/*test*",
+    ]
+}

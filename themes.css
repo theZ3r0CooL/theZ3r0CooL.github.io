@@ -1,0 +1,202 @@
+:root {
+    /* variable colors */
+    --color-switcher-bg: var(--color-transparent-10);
+}
+
+/* hide the labels in the fieldset */
+.legend-theme, .label-theme {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+/* toggles hiding the change theme button and theme chooser */
+.hide-top {
+    transform: translate(-50%, -150%)!important;
+}
+
+/* hide the header if there's not enough room for it when theme menu opens */
+@media screen and (max-width: 600px) {
+    #header.hide-header {
+        transform: translate(0, -150%)!important;
+    }
+}
+
+/* set the toggle button and chooser to be top and center */
+#theme-chooser,
+#btn-chooser-toggle {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: transform 600ms ease;
+    z-index: 1000;
+}
+
+#theme-chooser {
+    position: absolute;
+}
+
+/* padding allows button to transition completely out of view and squares the button some */
+#btn-chooser-toggle {
+    width: 2.5rem;
+    height: auto;
+    padding: 1% 0;
+}
+
+#theme-chooser > fieldset {
+    border: 0;
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    background: var(--color-switcher-bg);
+    padding: 1rem 3rem;
+    margin-inline: auto;
+    border-radius: 0 0 1rem 1rem;
+}
+
+/* general radio button styling */
+#theme-chooser input[type='radio'] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    outline: 3px solid var(--radio-color, currentColor);
+    outline-offset: 0.2rem;
+    border-radius: 50%;
+}
+
+/* general checked radio button styling */
+#theme-chooser input[type='radio']:checked {
+    background-color: var(--radio-color);
+}
+
+/* 'Light' radio button styling */
+#theme-chooser input[type='radio']#Light {
+    --radio-color: rgb(128 128 128 / 1);
+}
+
+/* 'Light' radio button hovered styling */
+#theme-chooser input[type='radio']:hover#Light {
+    background: rgba(128 128 128 / 0.6);
+}
+
+/* 'Pink' radio button styling */
+#theme-chooser input[type='radio']#Pink {
+    --radio-color: rgba(255 191 202 / 1);
+}
+
+/* 'Pink' radio button hovered styling */
+#theme-chooser input[type='radio']:hover#Pink {
+    background: rgba(255 191 202 / 0.6);
+}
+
+/* 'Blue' radio button styling */
+#theme-chooser input[type='radio']#Blue {
+    --radio-color: rgba(0 0 255 / 1);
+}
+
+/* 'Blue' radio button hovered styling */
+#theme-chooser input[type='radio']:hover#Blue {
+    background: rgba(0 0 255 / 0.6);
+}
+
+/* 'Green' radio button styling */
+#theme-chooser input[type='radio']#Green {
+    --radio-color: rgba(0 128 0 / 1);
+}
+
+/* 'Green' radio button hovered styling */
+#theme-chooser input[type='radio']:hover#Green {
+    background: rgba(0 128 0 / 0.6);
+}
+
+/* 'Dark' radio button styling */
+#theme-chooser input[type='radio']#Dark {
+    --radio-color: rgba(36 36 36 / 1);
+}
+
+/* 'Dark' radio button hovered styling */
+#theme-chooser input[type='radio']:hover#Dark {
+    background: rgba(36 36 36 / 0.6);
+}
+
+/* for browsers without ':has()' support */
+.Pink {
+    --color-body-bg: hsl(310deg 32% 86%);
+    --color-switcher-bg: var(--color-transparent-10);
+    --color-content-bg: hsl(310deg 50% 100%);
+    --color-content-shadow: hsl(310deg 50% 10%);
+    --color-text: hsl(310deg 50% 15%);
+    --color-heading: hsl(310deg 50% 25%);
+}
+
+.Blue {
+    --color-body-bg: hsl(211deg 32% 86%);
+    --color-switcher-bg: var(--color-transparent-10);
+    --color-content-bg: hsl(209deg 50% 100%);
+    --color-content-shadow: hsl(209deg 50% 10%);
+    --color-text: hsl(209deg 50% 15%);
+    --color-heading: hsl(209deg 50% 25%);
+}
+
+.Green {
+    --color-body-bg: hsl(112deg 32% 86%);
+    --color-switcher-bg: var(--color-transparent-10);
+    --color-content-bg: hsl(109deg 50% 100%);
+    --color-content-shadow: hsl(109deg 50% 10%);
+    --color-text: hsl(109deg 50% 15%);
+    --color-heading: hsl(109deg 50% 25%);
+}
+
+.Dark {
+    --color-body-bg: hsl(209deg 49% 10%);
+    --color-switcher-bg: var(--color-transparent-10-dark);
+    --color-content-bg: hsl(209deg 50% 5%);
+    --color-content-shadow: hsl(209deg 65% 80%);
+    --color-text: hsl(209deg 50% 85%);
+    --color-heading: hsl(209deg 50% 95%);
+}
+
+/* for browsers with ':has()' support */
+:root:has(#Pink:checked) {
+    --color-body-bg: hsl(310deg 32% 86%);
+
+    /* --color-body-bg: rgba(255 191 202 / 1); inWork: determine best colors */
+
+    --color-switcher-bg: var(--color-transparent-10);
+    --color-content-bg: hsl(310deg 50% 100%);
+    --color-content-shadow: hsl(310deg 50% 10%);
+    --color-text: hsl(310deg 50% 15%);
+    --color-heading: hsl(310deg 50% 25%);
+}
+
+:root:has(#Blue:checked) {
+    --color-body-bg: hsl(211deg 32% 86%);
+    --color-switcher-bg: var(--color-transparent-10);
+    --color-content-bg: hsl(209deg 50% 100%);
+    --color-content-shadow: hsl(209deg 50% 10%);
+    --color-text: hsl(209deg 50% 15%);
+    --color-heading: hsl(209deg 50% 25%);
+}
+
+:root:has(#Green:checked) {
+    --color-body-bg: hsl(112deg 32% 86%);
+    --color-switcher-bg: var(--color-transparent-10);
+    --color-content-bg: hsl(109deg 50% 100%);
+    --color-content-shadow: hsl(109deg 50% 10%);
+    --color-text: hsl(109deg 50% 15%);
+    --color-heading: hsl(109deg 50% 25%);
+}
+
+:root:has(#Dark:checked) {
+    --color-body-bg: hsl(208deg 50% 13%);
+    --color-switcher-bg: var(--color-transparent-10-dark);
+    --color-content-bg: hsl(209deg 50% 5%);
+    --color-content-shadow: hsl(209deg 65% 80%);
+    --color-text: hsl(209deg 50% 85%);
+    --color-heading: hsl(209deg 50% 95%);
+}

@@ -1,0 +1,28 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='256' height='256' viewBox='0 -1 13 11.8' fill='none'>
+	<g stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'>
+		<path id='lp' d='M 4,2 L 1,5 L 4,8'>
+			<animate
+			    attributeName='d'
+			    from='M 4,2 L 1,5 L 4,8'
+			    to='M 9,1 L 3,9 L 9,9'
+			    dur='5s'
+			    fill='freeze' />
+		</path>
+		<path id='cp' d='M 8,1 L 5,9'>
+			<animate
+			    attributeName='d'
+			    from='M 8,1 L 5,9'
+			    to='M 9,1 L 3,9'
+			    dur='5s'
+			    fill='freeze' />
+		</path>
+		<path id='rp' d='M 9,2 L 12,5 L 9,8'>
+			<animate
+			    attributeName='d'
+			    from='M 9,2 L 12,5 L 9,8'
+			    to='M 3,1 L 9,1 L 3,9'
+			    dur='5s'
+			    fill='freeze' />
+		</path>
+	</g>
+</svg>

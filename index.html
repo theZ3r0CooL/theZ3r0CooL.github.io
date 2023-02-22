@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=G-T9RZ8G5LXT'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-T9RZ8G5LXT');
+    </script>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <link rel='stylesheet' href='index.css'>
+    <link rel='stylesheet' href='themes.css'>
+    <title>theZ3r0CooL.github.io</title>
+    <meta name='description' content='Stay up to date with my latest projects and contributions.'>
+    <meta name='author' content='Z3r0CooL'>
+    <meta name='keywords' content='Git, Z3r0, Z3r0CooL'>
+    <base href='.'>
+    <link rel='manifest' href='manifest.webmanifest'>
+    <meta name='theme-color' content='#353535'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload='setTheme()'>
+<!--<div id='blob'></div>-->
+<!--<div id='blur'></div>-->
+<button id='btn-chooser-toggle' title='Change Theme!'>
+    <svg viewBox='0 0 192 116' fill='currentColor' stroke='none'>
+        <path d='M186.406 27.606 106.408 107.606C103.595 110.419 99.78 112 95.802 112 91.823 112 88.009 110.42 85.195 107.606L5.193 27.606C-.665 21.749-.665 12.251 5.193 6.393 11.05.535 20.548.535 26.406 6.393L95.802 75.786 165.194 6.393C171.051.535 180.549.535 186.407 6.393 192.265 12.251 192.265 21.749 186.406 27.606Z'/>
+    </svg>
+</button>
+<form id='theme-chooser' class='hide-top' action=''>
+    <fieldset>
+        <legend class='legend-theme'>Select a Theme</legend>
+
+        <label for='Light' class='label-theme'>Light</label>
+        <input type='radio' id='Light' name='theme' checked/>
+
+        <label for='Pink' class='label-theme'>Pink</label>
+        <input type='radio' id='Pink' name='theme'/>
+
+        <label for='Blue' class='label-theme'>Blue</label>
+        <input type='radio' id='Blue' name='theme'/>
+
+        <label for='Green' class='label-theme'>Green</label>
+        <input type='radio' id='Green' name='theme'/>
+
+        <label for='Dark' class='label-theme'>Dark</label>
+        <input type='radio' id='Dark' name='theme'/>
+    </fieldset>
+</form>
+<header id='header'>
+    <a href='/index.html' title='https://theZ3r0CooL.github.io/'>
+        <!--                <a href='https://theZ3r0CooL.github.io/'> inWork: debug/prod -->
+        <svg viewBox='0 -1 28 11.8' fill='none' stroke='currentColor'>
+            <g id='Z' stroke-linecap='round' stroke-linejoin='round'>
+                <animate id='wait0' dur='2s' fill='freeze'/>
+                <path id='lp' d='M 4,2 L 1,5 L 4,8'>
+                    <animate
+                            attributeName='d'
+                            from='M 4,2 L 1,5 L 4,8'
+                            to='M 9,1 L 3,9 L 9,9'
+                            begin='wait0.end'
+                            dur='2s'
+                            fill='freeze' />
+                </path>
+                <path id='cp' d='M 8,1 L 5,9'>
+                    <animate
+                            attributeName='d'
+                            from='M 8,1 L 5,9'
+                            to='M 25,1 L 23,8'
+                            begin='wait0.end'
+                            dur='2s'
+                            fill='freeze' />
+                </path>
+                <path id='rp' d='M 9,2 L 12,5 L 9,8'>
+                    <animate
+                            attributeName='d'
+                            from='M 9,2 L 12,5 L 9,8'
+                            to='M 3,1 L 9,1 L 3,9'
+                            begin='wait0.end'
+                            dur='2s'
+                            fill='freeze' />
+                </path>
+            </g>
+            <g id='3r0' stroke-linecap='round' stroke-linejoin='round' opacity='0'>
+                <path id='3' d='M2 1C7 1 7 5 3 5 7 5 7 9 2 9'>
+                    <animate
+                            id='wait1'
+                            dur='2s'
+                            fill='freeze' />
+                    <animate
+                            attributeName='d'
+                            from='M2 1C7 1 7 5 3 5 7 5 7 9 2 9'
+                            to='M11 1C16 1 16 5 12 5 16 5 16 9 11 9'
+                            begin='wait1.end'
+                            dur='2s'
+                            fill='freeze' />
+                </path>
+                <path id='r' d='M4 4 4 9 4 7C4 4 7 4 7 6'>
+                    <animate
+                            id='wait1'
+                            dur='2s'
+                            fill='freeze' />
+                    <animate
+                            attributeName='d'
+                            from='M4 4 4 9 4 7C4 4 7 4 7 6'
+                            to='M17 4 17 9 17 7C17 4 20 4 20 6'
+                            begin='wait1.end'
+                            dur='2s'
+                            fill='freeze' />
+                </path>
+                <path id='0' d='M4 0C7 0 7 9 4 9 1 9 1 0 4 0'>
+                    <animate
+                            id='wait1'
+                            dur='2s'
+                            fill='freeze' />
+                    <animate
+                            attributeName='d'
+                            from='M4 0C7 0 7 9 4 9 1 9 1 0 4 0'
+                            to='M24 0C27 0 27 9 24 9 21 9 21 0 24 0'
+                            begin='wait1.end'
+                            dur='2s'
+                            fill='freeze' />
+                </path>
+                <animate
+                        attributeName='opacity'
+                        from='0'
+                        to='1'
+                        begin='wait1.end'
+                        dur='2s'
+                        fill='freeze' />
+            </g>
+        </svg>
+    </a>
+    <a href='https://github.com/theZ3r0CooL' title='https://github.com/theZ3r0CooL/'>
+        <svg viewBox='-5 -4 34 34' fill='currentColor' stroke='none'>
+            <path d='M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.338 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.688c-.1-.25-.45-1.275.1-2.65c0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337c1.912-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z'/>
+        </svg>
+    </a>
+</header>
+<div class='content'>
+    <h3>Check out some of my open source work:</h3>
+    <section class='section'>
+        <h3>Pinned Repos: </h3>
+        <span class='divider-h'></span>
+        <svg id='loading' viewBox='0 0 100 100' fill='currentColor'>
+            <g transform='rotate(0 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.9166666666666666s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(30 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.8333333333333334s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(60 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.75s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(90 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.6666666666666666s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(120 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.5833333333333334s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(150 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.5s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(180 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.4166666666666667s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(210 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.3333333333333333s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(240 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.25s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(270 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.16666666666666666s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(300 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.08333333333333333s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+            <g transform='rotate(330 50 50)'>
+                <rect x='47.5' y='22' rx='2.5' ry='3.24' width='5' height='12'>
+                    <animate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='0s' repeatCount='indefinite'></animate>
+                </rect>
+            </g>
+        </svg>
+        <ul id='repos'></ul>
+    </section>
+</div>
+<!-- example using document query selector -->
+<!-- storing and persisting theme -->
+<script>
+    const colorThemes = document.querySelectorAll('[name="theme"]');
+    const buttonToggle = document.querySelector('[id="btn-chooser-toggle"]');
+    const chooser = document.querySelector('[id="theme-chooser"]');
+    const header = document.querySelector('[id="header"]');
+
+    const updateTheme = (theme) => {
+        localStorage.setItem('theme', theme);
+        // fallback browsers without ':has()' support
+        document.documentElement.className = theme;
+
+        buttonToggle.classList.toggle('hide-top');
+        chooser.classList.toggle('hide-top');
+        header.classList.toggle('hide-header');
+    };
+
+    const setTheme = () => {
+        const theme = localStorage.getItem('theme') ?? 'Light';
+        colorThemes.forEach((themeOption) => {
+            if (themeOption.id === theme) {
+                themeOption.checked = true;
+            }
+        });
+        // fallback browsers without ':has()' support
+        document.documentElement.className = theme;
+    };
+
+    colorThemes.forEach((themeOption) => {
+        themeOption.addEventListener('click', () => {
+            updateTheme(themeOption.id);
+        });
+    });
+
+    buttonToggle.addEventListener('click', (e) => {
+        buttonToggle.classList.toggle('hide-top');
+        chooser.classList.toggle('hide-top');
+        header.classList.toggle('hide-header');
+    });
+</script>
+<!-- animating the cursor blob -->
+<!--<script>
+    const blob = document.querySelector('[id="blob"]');
+    document.addEventListener('mousemove', function (event) {
+        blob.animate({
+            top: `${event.clientY}px`,
+            left: `${event.clientX}px`
+        }, { duration: 3000, fill: 'forwards' })
+    });
+</script>-->
+<!-- example using jQuery -->
+<!-- getting GitHub info -->
+<script defer>
+    $(document).ready(function() {
+
+        const username = 'theZ3r0CooL';
+        /*const userInfoUrl = 'https://api.github.com/users/' + username;*/
+        const graphqlUrl = 'https://api.github.com/graphql';
+        const reposList = $('#repos');
+        const loadingImage = $('#loading');
+
+        loadingImage.show();
+
+        // inWork: do something with standard api to show contributor stats or something
+        /*$.getJSON(userInfoUrl, function(data) {
+            console.debug('data', data);
+            loadingImage.hide();
+        });*/
+
+        <!-- example using ajax and GraphQL to get pinned repos -->
+        function getPinnedRepos(token) {
+            $.ajax({
+                url: graphqlUrl,
+                type: 'POST',
+                headers: {
+                    Authorization: `Bearer ${ token }`
+                },
+                data: JSON.stringify({
+                    query: `
+                          query {
+                            user(login: "${username}") {
+                              pinnedItems(types: [REPOSITORY], first: 6) {
+                                nodes {
+                                  ... on Repository {
+                                    name
+                                    description
+                                    url
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        `
+                }),
+                success: function(result) {
+                    const repos = result.data.user.pinnedItems.nodes;
+                    $.each(repos, function(index, repo) {
+                        const repoLink = $('<a>').attr('href', repo.url).attr('title', repo.url).text(repo.name);
+                        const repoDescription = $('<p>').text(repo.description);
+                        const listItem = $('<li>').append(repoLink).append(repoDescription);
+                        reposList.append(listItem);
+                    });
+
+                    loadingImage.hide();
+                    reposList.show();
+                }
+            });
+        }
+
+        <!-- example using jquery to get limited pinned repo read access token from json -->
+        $.getJSON('vars.json', function (data) {
+            $.each(data, function (key, value) {
+                if (key === 'GH_TOKEN') {
+                    getPinnedRepos(value);
+                }
+            });
+        });
+
+    });
+</script>
+</body>
+</html>

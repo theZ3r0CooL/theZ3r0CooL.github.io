@@ -1,0 +1,80 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='256' height='128' viewBox='0 -1 28 11.8' fill='none' stroke='#00CCE3'>
+	<g id='Z' stroke-linecap='round' stroke-linejoin='round'>
+		<animate id='wait0' dur='2s' fill='freeze' />
+		<path id='lp' d='M 4,2 L 1,5 L 4,8'>
+			<animate
+			    attributeName='d'
+			    from='M 4,2 L 1,5 L 4,8'
+			    to='M 9,1 L 3,9 L 9,9'
+			    begin='wait0.end'
+			    dur='2s'
+			    fill='freeze' />
+		</path>
+		<path id='cp' d='M 8,1 L 5,9'>
+			<animate
+			    attributeName='d'
+			    from='M 8,1 L 5,9'
+			    to='M 25,1 L 23,8'
+			    begin='wait0.end'
+			    dur='2s'
+			    fill='freeze' />
+		</path>
+		<path id='rp' d='M 9,2 L 12,5 L 9,8'>
+			<animate
+			    attributeName='d'
+			    from='M 9,2 L 12,5 L 9,8'
+			    to='M 3,1 L 9,1 L 3,9'
+			    begin='wait0.end'
+			    dur='2s'
+			    fill='freeze' />
+		</path>
+	</g>
+	<g id='3r0' stroke-linecap='round' stroke-linejoin='round' opacity='0'>
+		<path id='3' d='M2 1C7 1 7 5 3 5 7 5 7 9 2 9'>
+			<animate
+				id='wait1'
+			    dur='2s'
+			    fill='freeze' />
+			<animate
+			    attributeName='d'
+			    from='M2 1C7 1 7 5 3 5 7 5 7 9 2 9'
+			    to='M11 1C16 1 16 5 12 5 16 5 16 9 11 9'
+			    begin='wait1.end'
+			    dur='2s'
+			    fill='freeze' />
+		</path>
+		<path id='r' d='M4 4 4 9 4 7C4 4 7 4 7 6'>
+			<animate
+				id='wait1'
+			    dur='2s'
+			    fill='freeze' />
+			<animate
+			    attributeName='d'
+			    from='M4 4 4 9 4 7C4 4 7 4 7 6'
+			    to='M17 4 17 9 17 7C17 4 20 4 20 6'
+			    begin='wait1.end'
+			    dur='2s'
+			    fill='freeze' />
+		</path>
+		<path id='0' d='M4 0C7 0 7 9 4 9 1 9 1 0 4 0'>
+			<animate
+				id='wait1'
+			    dur='2s'
+			    fill='freeze' />
+			<animate
+			    attributeName='d'
+			    from='M4 0C7 0 7 9 4 9 1 9 1 0 4 0'
+			    to='M24 0C27 0 27 9 24 9 21 9 21 0 24 0'
+			    begin='wait1.end'
+			    dur='2s'
+			    fill='freeze' />
+		</path>
+		<animate
+				attributeName='opacity'
+				from='0'
+				to='1'
+				begin='wait1.end'
+				dur='2s'
+				fill='freeze' />
+	</g>
+</svg>

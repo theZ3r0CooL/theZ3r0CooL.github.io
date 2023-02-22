@@ -1,0 +1,17 @@
+title: Z3r0CooL's homepage
+description: Bookmark this to keep an eye on my project updates!
+author: theZ3r0CooL
+
+social-network-links:
+  github: theZ3r0CooL
+
+share-links-active:
+  linkedin: true
+
+exclude:
+  - README.md
+  - package.json
+  - package-lock.json
+  - code-z.svg
+  - code-z3r0.svg
+
