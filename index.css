@@ -120,6 +120,8 @@ ul {
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    overflow-x: hidden;
+    overflow-y: scroll;
     z-index: 1;
 }
 
