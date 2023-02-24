@@ -1,7 +1,15 @@
 {
   "name": "thez3r0cool.github.io",
   "version": "0.1.0",
+  "description": "A profile and portfolio of the open source works and contributions of theZ3r0CooL.",
+  "author": "theZ3r0CooL (https://github.com/sponsors/theZ3r0CooL)",
   "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "private": true,
   "devDependencies": {
     "depcheck": "^1.4.3",
@@ -35,7 +43,6 @@
     "type": "git",
     "url": "git+https://github.com/theZ3r0CooL/theZ3r0CooL.github.io.git"
   },
-  "description": "<hr style='border-top: 3px solid #bbb'/> <img src='./code-z3r0.svg' alt='Z3r0/'/>",
   "bugs": {
     "url": "https://github.com/theZ3r0CooL/theZ3r0CooL.github.io/issues"
   },
@@ -45,7 +52,8 @@
     "z3r0",
     "z3r0cool",
     "thez3r0cool",
-    "zerocool"
-  ],
-  "author": "theZ3r0CooL"
+    "zerocool",
+    "profile",
+    "portfolio"
+  ]
 }
