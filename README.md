@@ -19,7 +19,7 @@
         </ul>
         <h6 style='color: mediumturquoise'>In Progress</h6>
         <ul>
-            <li><em>Add game for viewers to waste time playing while browsing projects.</em></li>
+            <li><em>Add game for repo browsers to waste time playing.</em></li>
             <li><em>Add animations in minor areas such as section resizing.</em></li>
             <li><em>Add more projects as they are ready.</em></li>
             <li><em>Add option to toggle cursor 'blob' effect.</em></li>
