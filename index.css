@@ -85,7 +85,7 @@ button:hover svg {
 section {
     position: relative;
     width: max-content;
-    max-width: 90%;
+    max-width: 60%;
     display: flex;
     flex-direction: column;
     place-content: center;
@@ -120,8 +120,9 @@ ul {
     inset: 50% 0 0 0;
     translate: 0 -50%;
     padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
     z-index: 1;
 }
 
@@ -148,6 +149,10 @@ ul {
 .content *:has(a:hover),
 .content *:has(a:active) {
     --opacity: 0.8;
+}
+
+.content h2 {
+    white-space: nowrap;
 }
 
 @media (orientation: landscape) and (max-width: 700px),
