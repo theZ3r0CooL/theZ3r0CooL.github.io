@@ -15,7 +15,7 @@
         <ul>
             <li><em>Theme switcher and styling using HTML and CSS; JS used only to persist selection.</em></li>
             <li><em>Pinned repos pulled and displayed live from GitHub user profile.</em></li>
-            <li><em>Fixed most cursor 'blob' effect.</em></li>
+            <li><em>Cursor 'blob' effect.</em></li>
         </ul>
         <h6 style='color: mediumturquoise'>In Progress</h6>
         <ul>
