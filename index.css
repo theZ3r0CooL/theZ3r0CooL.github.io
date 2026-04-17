@@ -159,11 +159,116 @@ ul {
 
 @media (orientation: landscape) and (max-width: 700px),
     (orientation: portrait) and (max-width: 1020px) {
+    :root {
+        --font-size: 11pt;
+    }
+
+    body {
+        position: static;
+        min-height: 100dvh;
+        font-size: var(--font-size);
+    }
+
+    header {
+        position: absolute; /* keep your current nice mobile header behavior */
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    header svg {
+        width: 3.5rem;
+    }
+
     .content {
-        padding: 0.5rem;
-        grid-template-columns: 1fr;
+        position: static;
+        inset: auto;
+        translate: none;
+        width: 100%;
+        min-height: 100dvh;
+        box-sizing: border-box;
+        margin-top: 5.5rem; /* room for header */
+        padding: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0.75rem;
+        overflow: visible;
+    }
+
+    .content > * {
+        place-self: stretch;
+        opacity: 1;
+    }
+
+    section {
+        width: auto;
+        max-width: none;
+        padding: 0.75rem 0.9rem;
+        border-radius: 0.4rem;
+        box-shadow: -0.12rem 0.12rem 0.2rem var(--color-content-shadow);
+    }
+
+    .content h1,
+    .content h2,
+    .content h3 {
+        white-space: normal;
+        line-height: 1.2;
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    label,
+    a,
+    button,
+    input,
+    li,
+    p {
+        font-size: 0.95em;
+    }
+
+    #repos li {
+        margin: 0.75rem 0 0.75rem 0.75rem;
+    }
+
+    #repos p {
+        font-size: 0.85em;
+    }
+
+    #loading {
+        width: 3rem;
+    }
+
+    #blob {
+        height: 22rem;
+        max-height: 45vh;
+    }
+
+    #blur {
+        backdrop-filter: blur(70px);
+        -webkit-backdrop-filter: blur(70px);
     }
 }
+
+/* @media (orientation: portrait) {
+    #blob {
+        width: auto;
+        height: 30%;
+    }
+} */
 
 .divider-h {
     width: 100%;
@@ -206,13 +311,6 @@ ul {
     animation: rotate 14s infinite;
     /*opacity: 0.8; TODO: maybe lower the opacity if not themed */
     z-index: -1;
-}
-
-@media (orientation: portrait) {
-    #blob {
-        width: auto;
-        height: 30%;
-    }
 }
 
 /* blur styling */
