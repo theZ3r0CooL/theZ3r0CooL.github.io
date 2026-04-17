@@ -290,21 +290,13 @@
                         Authorization: `Bearer ${ token }`
                     },
                     data: JSON.stringify({
-                        query: `
-                              query {
-                                user(login: "${username}") {
-                                  pinnedItems(types: [REPOSITORY], first: 6) {
-                                    nodes {
-                                      ... on Repository {
-                                        name
-                                        description
-                                        url
-                                      }
+                        query: ` query {
+                                    user(login: "${username}") {
+                                        pinnedItems(types: [REPOSITORY], first: 6) {
+                                            nodes {... on Repository { name description url }}
+                                        }
                                     }
-                                  }
-                                }
-                              }
-                            `
+                                }`
                     }),
                     success: function(result) {
                         const repos = result.data.user.pinnedItems.nodes;
@@ -321,7 +313,7 @@
                 });
             }
 
-            <!-- example using jquery to get limited pinned repo read access token from json -->
+            // example using jquery to get limited pinned repo read access token from json
             $.getJSON('vars.json', function (data) {
                 $.each(data, function (key, value) {
                     if (key === 'GH_TOKEN') {

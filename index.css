@@ -32,7 +32,7 @@ body {
     background: var(--color-body-bg);
     color: var(--color-text);
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     font-size: var(--font-size);
 }
 
@@ -123,6 +123,8 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    overflow: hidden;
+    overflow-y: auto;
     z-index: 1;
 }
 
@@ -227,6 +229,7 @@ ul {
 @supports not (backdrop-filter: blur()) {
     #blur {
         -webkit-backdrop-filter: blur(100px);
+        backdrop-filter: blur(100px);
     }
 }
 
