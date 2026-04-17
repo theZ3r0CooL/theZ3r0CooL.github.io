@@ -222,7 +222,7 @@ section {
 
     body {
         position: static;
-        min-height: 100dvh;
+        /* min-height: 100dvh; */
         font-size: var(--font-size);
     }
 
@@ -238,19 +238,15 @@ section {
     }
 
     .content {
-        position: static;
-        inset: auto;
+        inset: 0;
         translate: none;
-        width: 100%;
-        min-height: 100dvh;
         box-sizing: border-box;
-        margin-block-start: 30%;
+        margin: 0;
         padding: 0.75rem;
-        display: flex;
         flex-direction: column;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: 5dvh;
+        place-items: center;
+        place-content: space-around;
+        gap: 0;
         overflow: visible;
         opacity: 1;
     }
